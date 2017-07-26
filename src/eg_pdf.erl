@@ -124,7 +124,6 @@ init_pdf_context()->
 
 %% @doc Spawn pdf building process
 new()->
-    io:format("New pdf~n",[]),
     {ok, PDF} = start_link( [init_pdf_context(), <<>>] ),
     PDF.
 
@@ -592,7 +591,7 @@ inBuiltFonts() ->
 %% Description: Starts the server
 %%--------------------------------------------------------------------
 start_link(Init) ->
-    gen_server:start_link({local,pdf}, ?MODULE, Init, []).
+    gen_server:start_link(?MODULE, Init, []).
 
 %%====================================================================
 %% gen_server callbacks
