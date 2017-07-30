@@ -3,7 +3,7 @@
 -export([index/0,ascender/0,capHeight/0,descender/0,italicAngle/0]).
 -export([xHeight/0, flags/0, type/0, stemV/0,fontBBox/0,widths/0]).
 -export([encoding/0]).
-fontName() -> "Courier-BoldOblique".
+fontName() -> "Courier-Bold".
 index() -> 1.
 type() -> internal.
 encoding() -> "AdobeStandardEncoding".
@@ -12,11 +12,11 @@ lastChar() ->255.
 ascender() ->626.
 capHeight() ->562.
 descender() ->-142.
-italicAngle() ->-12.
+italicAngle() ->0.
 xHeight() ->439.
-flags() ->97.
+flags() ->33.
 stemV() ->0.
-fontBBox() ->{-56,-250,868,801}.
+fontBBox() ->{-113,-250,749,801}.
 widths() ->[600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,
  600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,
  600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,600,

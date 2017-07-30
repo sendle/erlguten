@@ -3,7 +3,7 @@
 -export([index/0,ascender/0,capHeight/0,descender/0,italicAngle/0]).
 -export([xHeight/0, flags/0, type/0, stemV/0,fontBBox/0,widths/0]).
 -export([encoding/0]).
-fontName() -> "Helvetica-Bold".
+fontName() -> "Helvetica-BoldOblique".
 index() -> 6.
 type() -> internal.
 encoding() -> "AdobeStandardEncoding".
@@ -12,11 +12,11 @@ lastChar() ->255.
 ascender() ->718.
 capHeight() ->718.
 descender() ->-207.
-italicAngle() ->0.
+italicAngle() ->-12.
 xHeight() ->532.
-flags() ->32.
+flags() ->96.
 stemV() ->0.
-fontBBox() ->{-170,-228,1003,962}.
+fontBBox() ->{-174,-228,1114,962}.
 widths() ->[278,333,474,556,556,889,722,238,333,333,389,584,278,333,278,278,556,556,556,
  556,556,556,556,556,556,556,333,333,584,584,584,611,975,722,722,722,722,667,
  611,778,722,278,556,722,611,833,722,778,667,778,722,667,611,722,667,944,667,
