@@ -907,7 +907,7 @@ font_dir() ->
 
 get_font_program(Handler) ->
     File = filename:join(font_dir(), atom_to_list(Handler) ++ ".pfb"),
-    io:format(user,"reading Font from:~s~n",[File]),
+    %% io:format(user,"reading Font from:~s~n",[File]),
     P = eg_embed:parse_pfb(File),
     case P of
 	[{_,L1,B1},{_,L2,B2},{_,L3,B3}|_] ->
