@@ -43,6 +43,7 @@
          inches/1,
          get_page_no/1,
          get_state/1,
+         get_mediabox/1,
          get_string_width/3, get_string_width/4,
          grid/3,
 	 header/0,
@@ -145,6 +146,11 @@ delete(PID)->
 
 get_state(PID) ->
   gen_server:call(PID, {get_state}).
+
+%% @doc return the mediabox set on the server
+
+get_mediabox(PID) ->
+  gen_server:call(PID, {get_mediabox}).
 
 %% @doc Add current page context to PDF document and start on a new page 
 %% Note page 1 is already created  by default and  current page set 
@@ -643,8 +649,10 @@ handle_call({export}, _From, [PDFC, Stream]) ->
 	    {reply, {export, PDF, PageNo}, [PDFC, Stream]};
 	    
 handle_call({get_state}, _From, [PDFC, Stream]) ->	        
-	    {reply, [PDFC, Stream], [PDFC, Stream]}.
+	    {reply, [PDFC, Stream], [PDFC, Stream]};
 
+handle_call({get_mediabox}, _From, [PDFC, Stream]) ->
+      {reply, PDFC#pdfContext.mediabox, [PDFC, Stream]}.
 
 %%--------------------------------------------------------------------
 %% Function: handle_cast(Msg, State) -> {noreply, State} |
