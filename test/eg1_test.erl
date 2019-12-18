@@ -31,6 +31,7 @@ run_test()->
     ?debugMsg("Begin Test"),
     PDF = eg_pdf:new(),
     eg_pdf:set_pagesize(PDF,a4),
+    ?assert(eg_pdf:get_mediabox(PDF) =:= {0, 0, 595, 842}),
     eg_pdf:set_author(PDF,"Mikael Karlsson"),
     eg_pdf:set_title(PDF, "Test of PDF API"),
     eg_pdf:set_subject(PDF,"PDF is cool, but Erlang is cooler"),
